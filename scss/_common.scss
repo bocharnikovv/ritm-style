@@ -1,0 +1,89 @@
+@use "sass:math";
+
+// Percent
+@function percent($px, $from) {
+    $result: math.div($px, $from) * 100%;
+    @return $result;
+}
+
+// REM
+@function rem($px) {
+    $result: math.div($px, 16)+rem;
+    @return $result;
+}
+
+// EM
+@function em($px, $current: 16) {
+    $result: math.div($px, $current)+em;
+    @return $result;
+}
+
+//=================================================================================================
+
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+//=================================================================================================
+
+.container {
+    max-width: rem(1300);
+    margin: 0 auto;
+    padding: 0 rem(15);
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    >main {
+        flex: 1 1 auto;
+    }
+
+    ;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #162831;
+}
+
+//=================================================================================================
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    font-size: rem(13);
+    line-height: 140%;
+
+    padding: rem(9) rem(15);
+    border-radius: rem(3);
+
+    transition: .2s;
+
+    &-blue {
+        background-color: #018ABE;
+        color: #fff;
+
+        &:hover {
+            background-color: #00b7ff;
+        }
+
+        &:active {
+            background-color: #00b7ff;
+            transform: scale(0.9);
+        }
+    }
+
+    &-white {
+        color: #018ABE;
+        background-color: #fff;
+    }
+}
