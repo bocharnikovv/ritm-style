@@ -1,19 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 
     const burgerMenu = document.querySelector('.header__burger'),
         menu = document.querySelector('.header__menu'),
         btns = document.querySelector('.header__btns'),
         screenWidth = window.innerWidth;
-        body = document.body;
+    body = document.body;
 
-        if(btns) {
-            if(screenWidth <= 479.98) {
-                menu.append(btns);
-            }
+    if (btns) {
+        if (screenWidth <= 479.98) {
+            menu.append(btns);
         }
+    }
 
     if (burgerMenu) {
-        burgerMenu.addEventListener('click', () => {
+        burgerMenu.addEventListener('click', function() {
             if (!burgerMenu.classList.contains('burger-open')) {
                 burgerMenu.classList.add('burger-open');
                 menu.classList.add('burger-open');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        menu.addEventListener('click', (e) => {
+        menu.addEventListener('click', function(e) {
             if (e.target.hasAttribute('href')) {
                 burgerMenu.classList.remove('burger-open');
                 menu.classList.remove('burger-open');
@@ -34,8 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-
-
-
-
+    function ibg() {
+        let ibg = document.querySelectorAll('.ibg');
+        for (var i = 0; i < ibg.length; i++) {
+            if (ibg[i].querySelector('img')) {
+                ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+            }
+        }
+    }
+    ibg();
 });
