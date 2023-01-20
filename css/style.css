@@ -760,6 +760,11 @@ img {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
+@media (max-width: 61.99875em) {
+  .reviews-slide {
+    margin: 0;
+  }
+}
 .reviews-slide__center {
   transform: scale(1);
 }

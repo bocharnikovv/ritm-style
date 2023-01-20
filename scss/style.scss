@@ -368,6 +368,10 @@
         }
     }
 
+    @media (max-width: $tablet) {
+       margin: 0;
+    }
+
     // .reviews-slide__center
     &__center {
         &::before {

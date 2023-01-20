@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navAsThumbnails: true,
         autoplay: true,
         autoplayButtonOutput: false,
+        mouseDrag: true,
         responsive: {
             992: {
                 items: 2
