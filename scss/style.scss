@@ -1,5 +1,6 @@
 @import '_fonts';
 @import '_normalize';
+@import '_tiny-slider';
 @import '_common';
 
 //===== Header ====================================================================================
@@ -209,11 +210,7 @@
         font-family: 'El Messiri';
         position: relative;
         overflow: hidden;
-        padding: 14.047% 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 14.05% 0;
     }
 
     // .intro__media
@@ -281,10 +278,123 @@
     // .intro__title
     &__title {
         font-size: rem(64);
+
         @media (max-width: $mobile) {
             font-size: rem(44);
         }
+
         max-width: rem(400);
         margin: 0 auto;
+    }
+}
+
+//===== Services ==================================================================================
+
+
+
+//===== Reviews ===================================================================================
+
+.reviews {
+
+    // .reviews__wrapper
+    &__wrapper {
+        text-align: center;
+        position: relative;
+        padding: 0 0 rem(76) 0;
+
+        @media (max-width: $mobile) {
+            padding: 0 0 rem(35) 0;
+        }
+    }
+
+    // .reviews__slider
+    &__slider {
+        text-align: left;
+        display: flex;
+
+        // .reviews__slider-nav
+        &-nav {
+            display: flex;
+            align-items: center;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+
+        // .reviews__slider-btn
+        &-btn {
+            cursor: pointer;
+            margin: 0 rem(15);
+
+            width: rem(16);
+            height: rem(16);
+            background: #fff;
+            opacity: 0.4;
+            border-radius: 3px;
+
+            &.tns-nav-active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.reviews-slide {
+    background-color: #018ABE;
+    border-radius: rem(10);
+    padding: rem(25) rem(30);
+    margin: 0 rem(25);
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: .2s;
+    transform: scale(0.9);
+
+    @media (min-width: em(1366)) {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    // .reviews-slide__center
+    &__center {
+        &::before {
+            display: none;
+        }
+        transform: scale(1);
+    }
+
+    // .reviews-slide__name
+    &__name {
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 140%;
+
+        &:not(:last-child) {
+            margin: 0 0 rem(20);
+        }
+    }
+
+    // .reviews-slide__review
+    &__review {
+        font-weight: 300;
+        font-size: rem(14);
+        line-height: 140%;
+
+        &:not(:last-child) {
+            margin: 0 0 rem(25);
+        }
     }
 }

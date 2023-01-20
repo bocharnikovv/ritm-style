@@ -111,3 +111,48 @@ img {
         background-color: #fff;
     }
 }
+
+.title {
+    font-family: 'El Messiri';
+    font-size: rem(42);
+    line-height: 140%;
+    text-align: center;
+
+    display: inline-block;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 30%;
+        width: rem(28);
+        height: rem(14);
+        background: url('../img/decor/decor-rectangle-blue.svg') 0 center no-repeat;
+    }
+
+    &::before {
+        left: rem(-45);
+    }
+
+    &::after {
+        right: rem(-45);
+        transform: scaleX(-1);
+    }
+
+    &:not(:last-child) {
+        margin: 0 0 rem(100) 0;
+
+        @media (max-width: $tablet) {
+            margin: 0 0 rem(30) 0;
+        }
+    }
+}
+
+.section-pd {
+    padding: rem(100) 0 rem(50);
+
+    @media (max-width: $tablet) {
+        padding: rem(60) 0 rem(50);
+    }
+}
