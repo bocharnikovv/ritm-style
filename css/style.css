@@ -786,4 +786,139 @@ img {
 }
 .reviews-slide__review:not(:last-child) {
   margin: 0 0 1.5625rem;
+}
+
+.about__wrapper {
+  text-align: center;
+}
+.about__blocks {
+  text-align: left;
+}
+
+.about-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 56.25em) {
+  .about-block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-block:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+}
+.about-block:not(:last-child) {
+  margin: 0 0 6.25rem;
+}
+@media (max-width: 47.99875em) {
+  .about-block:not(:last-child) {
+    margin: 0 0 3.75rem;
+  }
+}
+.about-block__content {
+  max-width: 29.125rem;
+}
+@media (max-width: 56.25em) {
+  .about-block__content {
+    margin: 0 0 1.875rem;
+  }
+}
+.about-block__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 140%;
+}
+.about-block__title:not(:last-child) {
+  margin: 0 0 1.875rem 0;
+}
+.about-block__desc {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 140%;
+}
+.about-block__desc:not(:last-child) {
+  margin: 0 0 1.25rem 0;
+}
+.about-block__media {
+  border-radius: 0.625rem;
+}
+.about-block__media img {
+  max-width: 100%;
+  border-radius: 0.625rem;
+}
+@media (min-width: 56.25em) {
+  .about-block__media:nth-child(even) {
+    margin: 0 0 0 5rem;
+  }
+  .about-block__media:nth-child(odd) {
+    margin: 0 5rem 0 0;
+  }
+}
+
+.price__wrapper {
+  text-align: center;
+}
+.price__subwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 61.99875em) {
+  .price__subwrapper {
+    flex-direction: column;
+  }
+}
+.price__services {
+  flex: 0 1 30.77%;
+}
+@media (max-width: 61.99875em) {
+  .price__services:not(:last-child) {
+    margin: 0 0 1.875rem;
+  }
+}
+
+.price-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 140%;
+  padding: 0 0 0 2.375rem;
+  position: relative;
+}
+.price-service::before {
+  content: "";
+  position: absolute;
+  width: 1.125rem;
+  height: 0.5625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background: url("../img/decor/decor-rectangle-blue-small.svg") 0 center no-repeat;
+}
+.price-service:not(:last-child) {
+  margin: 0 0 1.875rem 0;
+}
+.price-service__name:not(:last-child) {
+  padding: 0 1.25rem 0 0;
+}
+.price-service__price {
+  font-family: "El Messiri";
+  font-weight: 700;
+}
+
+.price-media img {
+  border-radius: 0.625rem;
+  max-width: 100%;
+}
+.price-media img:not(:last-child) {
+  margin: 0 0 1.875rem;
+}
+.price-media__figcaption {
+  font-family: "El Messiri";
+  font-weight: 700;
+  font-size: 1.3125rem;
 }/*# sourceMappingURL=style.css.map */
