@@ -89,4 +89,65 @@ document.addEventListener('DOMContentLoaded', function () {
             info.slideItems[indexCurr].classList.add('reviews-slide__center');
         });
     }
+
+
+    function smooth_scroll(target, duration) {
+        var target = document.querySelector(target);
+        var targetPosition = target.getBoundingClientRect().top;
+        var startPosition = window.pageYOffset;
+        var distance = targetPosition - startPosition;
+        var startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            var timeElapsed = currentTime - startTime;
+            var run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+        requestAnimationFrame(animation);
+    }
+
+    function smooth_scroll(link, duration) {
+        const target = document.querySelector(link),
+            targetPosition = target.getBoundingClientRect().top,
+            startPosition = window.pageYOffset,
+            distance = targetPosition - startPosition;
+        let startTime = null;
+
+        console.log(startPosition);
+        console.log(targetPosition);
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            let timeElapsed = currentTime - startTime;
+            let run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+        requestAnimationFrame(animation);
+    }
+
+    let links = document.querySelectorAll('.menu__link');
+    links.forEach(function(link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            let target = link.getAttribute('href');
+            if (target.length > 1) {
+                smooth_scroll(target, 1000);
+            }
+        });
+    })
 });

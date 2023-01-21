@@ -21,10 +21,10 @@
                         <ul class="menu__list">
                             <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
                             <li class="menu__item"><a href="#" class="menu__link">Сеансы</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                            <li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
+                            <li class="menu__item"><a href="#location" class="menu__link">Контакты</a></li>
                             <li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Обо мне</a></li>
+                            <li class="menu__item"><a href="#about" class="menu__link">Обо мне</a></li>
                             <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
                         </ul>
                     </nav>
@@ -37,7 +37,6 @@
                 </div>
             </div>
         </header>
-
         <main class="main">
             <section class="intro">
                 <div class="container">
@@ -52,14 +51,7 @@
                     </div>
                 </div>
             </section>
-            <!-- <section class="services">
-                <div class="container">
-                    <div class="services__wrapper">
-                        <h2 class="title">Сеансы RitmStyle</h2>
-                    </div>
-                </div>
-            </section> -->
-            <section class="reviews section-pd">
+            <section class="reviews section-pd" id="reviews">
                     <div class="reviews__wrapper">
                         <h3 class="title">Отзывы</h3>
                         <div class="reviews__slider">
@@ -88,7 +80,7 @@
                         </div>
                     </div>
             </section>
-            <section class="about section-pd">
+            <section class="about section-pd" id="about">
                 <div class="container">
                     <div class="about__wrapper">
                         <h3 class="title">Об RitmStyle</h3>
@@ -117,7 +109,7 @@
                     </div>
                 </div>
             </section>
-            <section class="price section-pd">
+            <section class="price section-pd" id="prices">
                 <div class="container">
                     <div class="price__wrapper">
                         <h4 class="title">Стоимость сеансов</h4>
@@ -152,16 +144,60 @@
                     </div>
                 </div>
             </section>
+            <section class="contacts section-pd">
+                <div class="container">
+                    <div class="contacts__wrapper">
+                        <div class="contacts__map-wrapper">
+                            <div class="contacts__map" id="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7996.327064566242!2d30.37275495251171!3d59.93078538021303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631bb92b2b7f5%3A0xfc6c3540c8fb3df8!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDE0MCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMDM2!5e0!3m2!1sru!2sua!4v1674289046293!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="contacts__locations">
+                            <div class="contacts__location contacts-location">
+                                <h5 class="contacts-location__name">Бассейн WorkClass</h5>
+                                <div class="contacts-location__info">
+                                    <div class="contacts-location__media"><img src="img/contacts/map.svg" alt="map"></div>
+                                    <p>Невский 140</p>
+                                </div>
+                                <div class="contacts-location__info">
+                                    <div class="contacts-location__media"><img src="img/contacts/subway.svg" alt="subway"></div>
+                                    <p>м. Спасская</p>
+                                </div>
+                                <div class="contacts-location__info">
+                                    <div class="contacts-location__media"><img src="img/contacts/calendar.svg" alt="calendar"></div>
+                                    <p>Запись по договоренности</p>
+                                </div>
+                                <div class="contacts__btns"><a href="#" class="btn btn-white">Записаться на сеанс</a></div>
+                            </div>
+                            <div class="contacts__location contacts-location">
+                                <h5 class="contacts-location__name">Бассейн "На Гороховой"</h5>
+                                <div class="contacts-location__info">
+                                    <div class="contacts-location__media"><img src="img/contacts/map.svg" alt="map"></div>
+                                    <p>3-й проезд Иванова</p>
+                                </div>
+                                <div class="contacts-location__info">
+                                    <div class="contacts-location__media"><img src="img/contacts/subway.svg" alt="subway"></div>
+                                    <p>м. Крестовский остров</p>
+                                </div>
+                                <div class="contacts-location__info">
+                                    <div class="contacts-location__media"><img src="img/contacts/calendar.svg" alt="calendar"></div>
+                                    <p>Запись по договоренности</p>
+                                </div>
+                                <div class="contacts__btns"><a href="#" class="btn btn-white">Записаться на сеанс</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-
         <footer class="footer">
-            
+            <div class="container">
+                <div class="footer__wrapper">
+                    <p class="footer__desc">© 2018-2022 RitmStyle</p>
+                </div>
+            </div>
         </footer>
-
-
-
     </div>
-
     <script src="js/tiny-slider.js"></script>
     <script src="js/script.js"></script>
 </body>
